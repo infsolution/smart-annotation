@@ -19,3 +19,4 @@ Route.get('/',()=>{
   return {greeting: 'Hello World'}
 })
 Route.post('/user','UserController.create')
+Route.post('/login','UserController.login')
