@@ -40,8 +40,7 @@ class UserController {
             const validaToken = await auth.attempt(email, password)
             return validaToken
         } catch (error) {
-            return response.status(500).send({error: `Erro: ${error.message}`})
-            
+            return response.status(500).send({error: `Error: ${error.message}`})  
         }
     }
 }

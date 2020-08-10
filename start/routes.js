@@ -20,3 +20,5 @@ Route.get('/',()=>{
 })
 Route.post('/user','UserController.create')
 Route.post('/login','UserController.login')
+Route.resource('/annotation','AnnotationController').apiOnly().middleware('auth')
+Route.post('/annotation/:id/image', 'ImageController.create').middleware('auth')
